@@ -1,0 +1,18 @@
+<script>
+  // Cole a configuração do SDK aqui
+  const firebaseConfig = {
+    apiKey: "sua_apiKey",
+    authDomain: "seu_authDomain",
+    projectId: "seu_projectId",
+    storageBucket: "seu_storageBucket",
+    messagingSenderId: "seu_messagingSenderId",
+    appId: "seu_appId"
+  };
+
+  // Inicialize o Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Se estiver usando Firestore, pode inicializá-lo também
+  const db = firebase.firestore();
+</script>
+

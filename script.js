@@ -66,25 +66,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
             display.textContent = currentInput;
 
-            //metodo para adicionar registros
-            db.collection('matematica').add({
-                resultado: currentInput
-            })
-
         }
     });
 
     function operate(a, b, op) {
         switch (op) {
             case '+':
+                 //metodo para adicionar registros
+                db.collection('matematica').add({
+                resultado: a+b
+                })
                 return a + b;
             case '-':
+                db.collection('matematica').add({
+                    resultado: a-b
+                    })
                 return a - b;
             case '*':
+                db.collection('matematica').add({
+                    resultado: a*b
+                    })
                 return a * b;
             case '/':
+                db.collection('matematica').add({
+                    resultado: a/b
+                    })
                 return a / b;
             default:
+                db.collection('matematica').add({
+                    resultado: b
+                    })
                 return b;
         }
     }

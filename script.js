@@ -20,10 +20,10 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  firebase.initializeApp(config);
+  firebase.initializeApp(firebaseConfig);
   const db = getFirestore(app);
   db.settings({ timestampsInSnapshots: true});
-  
+
 document.addEventListener('DOMContentLoaded', function() {
     const display = document.getElementById('display');
     const buttons = document.getElementById('buttons');

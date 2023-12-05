@@ -22,7 +22,7 @@ const firebaseConfig = {
   const analytics = getAnalytics(app);
 
   const db = getFirestore(app);
-  db.settings({ timestampsInSnapshots: true});
+  
 
 document.addEventListener('DOMContentLoaded', function() {
     const display = document.getElementById('display');

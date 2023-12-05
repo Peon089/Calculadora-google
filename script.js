@@ -22,7 +22,6 @@ const analytics = getAnalytics(app);
 firebase.initializeApp(config);
 const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true});
-
 document.addEventListener('DOMContentLoaded', function() {
     const display = document.getElementById('display');
     const buttons = document.getElementById('buttons');
@@ -66,10 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             display.textContent = currentInput;
+
             //metodo para adicionar registros
             db.collection('matematica').add({
                 resultado: currentInput
             })
+
         }
     });
 

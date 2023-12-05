@@ -1,3 +1,4 @@
+import { doc, setDoc } from "firebase/firestore"; 
 document.addEventListener('DOMContentLoaded', function() {
     const display = document.getElementById('display');
     const buttons = document.getElementById('buttons');
@@ -49,29 +50,34 @@ document.addEventListener('DOMContentLoaded', function() {
         switch (op) {
             case '+':
                  //metodo para adicionar registros
-                db.collection('matematica').add({
-                resultado: a+b
-                })
+                 const docRef = addDoc(collection(db, "matematica"), {
+                    resultado: a+b
+                  });
+                  console.log("Document written with ID: ", docRef.id);
                 return a + b;
             case '-':
-                db.collection('matematica').add({
+                const docRef2 = addDoc(collection(db, "matematica"), {
                     resultado: a-b
-                    })
+                  });
+                  console.log("Document written with ID: ", docRef2.id);
                 return a - b;
             case '*':
-                db.collection('matematica').add({
+                const docRef3 = addDoc(collection(db, "matematica"), {
                     resultado: a*b
-                    })
+                  });
+                  console.log("Document written with ID: ", docRef3.id);
                 return a * b;
             case '/':
-                db.collection('matematica').add({
+                const docRef4 = addDoc(collection(db, "matematica"), {
                     resultado: a/b
-                    })
+                  });
+                  console.log("Document written with ID: ", docRef4.id);
                 return a / b;
             default:
-                db.collection('matematica').add({
+                const docRef5 = addDoc(collection(db, "matematica"), {
                     resultado: b
-                    })
+                  });
+                  console.log("Document written with ID: ", docRef5.id);
                 return b;
         }
     }

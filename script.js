@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             display.textContent = currentInput;
-            //metodo adicionar registro
+            //metodo adicionar registros
             db.collection('matematica').add({
                 resultado: currentInput
             })
